@@ -1,0 +1,41 @@
+[
+  {
+    "mnemonic":"n",
+    "caption":"Preferences",
+    "id":"preferences",
+    "children":[
+      {
+        "mnemonic":"P",
+        "caption":"Package Settings",
+        "id":"package-settings",
+        "children":[
+          {
+            "caption":"Chromeless Sublime",
+            "children":[
+              {
+                "caption":"Settings",
+                "command":"edit_settings",
+                "args":
+                {
+                  "base_file":"${packages}/ChromelessSublime/ChromelessSublime.sublime-settings",
+                  "default":"// Enabling\"auto_reenter_on_plugin_load\" will re-enter chromeless mode immediately on plugin load if it was enabled upon exit (a few seconds after sublime has been started):\n{\n\t\"auto_reenter_on_plugin_load\":true,\n}\n"
+                }
+              },
+              {
+                "caption":"Key Bindings",
+                "command":"edit_settings",
+                "args":
+                {
+                  "base_file":"${packages}/ChromelessSublime/Default (${platform}).sublime-keymap",
+                }
+              },
+              {
+                "caption":"-"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "caption":"Chromeless: Toggle titlebar",
+    "command":"chromeless_toggle",
+  },
+  {
+    "caption":"Chromeless: Edit settings",
+    "command":"edit_settings",
+    "args":
+    {
+      "base_file":"${packages}/ChromelessSublime/ChromelessSublime.sublime-settings",
+      "default":"// Enabling\"auto_reenter_on_plugin_load\" will re-enter chromeless mode immediately on plugin load if it was enabled upon exit (a few seconds after sublime has been started):\n{\n\t\"auto_reenter_on_plugin_load\":true,\n}\n"
+    }
+  },
+  {
+    "caption":"Chromeless: Edit key bindings",
+    "command":"edit_settings",
+    "args":
+    {
+      "base_file":"${packages}/ChromelessSublime/Default (${platform}).sublime-keymap",
+    }
+  },
+]

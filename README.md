@@ -1,5 +1,7 @@
 # Chromeless Sublime
 
+
+
 # Requirements:
 
 * Dependencies:
@@ -16,6 +18,7 @@
 # Caveats/Known issues:
 * Window is maximzed, but not movable/draggable
 * Setting is global and not per window
+
 
 
 

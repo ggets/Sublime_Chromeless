@@ -21,7 +21,9 @@ def plugin_loaded():
 		window=sublime.active_window()
 		if(window is None):
 			return sublime.set_timeout(lambda:plugin_loaded(),100)
-		window.run_command("chromeless_toggle")
+		onload_toggle=get_setting('last_state',False)
+		if(onload_toggle):
+			window.run_command("chromeless_toggle")
 
 # for ST2 - manual call to plugin_loaded()
 if(sys.version_info<(3,)):
@@ -55,6 +57,7 @@ def set_setting(k,d=None):
 class ChromelessToggleCommand(sublime_plugin.TextCommand):
 	def save_state(self):
 		global _chromeless
+		# print("set last_state to: {}".format(_chromeless))
 		set_setting("last_state",_chromeless)
 		save_settings()
 
@@ -68,10 +71,12 @@ class ChromelessToggleCommand(sublime_plugin.TextCommand):
 			wa_width=m.width_workarea
 			wa_height=m.height_workarea
 		if((wa_width>-1) and (wa_height>-1)):
-			isfs=sublime.active_window().settings().get('fss_on_full_screen')
-			self.view.window().run_command('toggle_full_screen')
+			sobj=sublime.active_window().settings()
+			isfs=sobj.get('fss_on_full_screen')
 			_chromeless=not isfs
+			sobj.set('fss_on_full_screen',_chromeless)
+			# print("_chromeless: {}".format(_chromeless))
+			self.view.window().run_command('toggle_full_screen')
 			if(not isfs):
 				self.view.window().run_command('resize_window', {'width':wa_width,'height':(wa_height)})
 			self.save_state()
-

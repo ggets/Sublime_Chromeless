@@ -1,4 +1,4 @@
 [
-  {"keys":["f11"],"command":"chromeless_toggle"},
-  {"keys":["ctrl+f11"],"command":"toggle_full_screen_wrapper"},
+  {"keys":["f11"],"command":"toggle_chromeless"},
+  {"keys":["ctrl+f11"],"command":"toggle_full_screen"},
 ]

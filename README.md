@@ -1,4 +1,4 @@
-# Chromeless Sublime
+# Chromeless Sublime v1.1.4
 
 
 
@@ -8,8 +8,6 @@
 * * enum
 * * typing
 * * screeninfo
-* Plugins:
-* * FullScreenStatus
 
 # Features:
 * Chromeless is a Sublime Text v3 plugin to make the titlebar toggleable

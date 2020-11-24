@@ -1,7 +1,7 @@
 [
   {
     "caption":"Chromeless: Toggle titlebar",
-    "command":"chromeless_toggle",
+    "command":"toggle_chromeless",
   },
   {
     "caption":"Chromeless: Edit settings",

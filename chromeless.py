@@ -1,5 +1,5 @@
 __author__='GG [github.com/ggetsov/]'
-__version__='1.2.1'
+__version__='1.3.2'
 __license__='Apache 2'
 __copyright__='Copyright 2020, Dreamflame Inc.'
 # Requires the FullScreenStatus sublime package (via Package Control)
@@ -18,7 +18,7 @@ _chromeless={}
 def plugin_loaded():
 	global _chromeless
 	load_settings()
-	onload_reenter=get_setting('auto_reenter_on_plugin_load',False)
+	onload_reenter=get_setting('persistent_chromeless_states',False)
 	if(onload_reenter):
 		window=sublime.active_window()
 		if(window is None):
@@ -114,3 +114,12 @@ class ToggleChromelessCommand(sublime_plugin.TextCommand):
 		win=self.view.window()
 		win.run_command("toggle_chromeless_internal")
 		self.save_states()
+
+
+class ChromelessQueryContextListener(sublime_plugin.EventListener):
+	def on_query_context(self,view,key,operator,operand,match_all):
+		if((key=='chromeless.replace_default_fs_shortcut') and (operator==0) and (operand==True)):
+			if(not view.window()):
+				return
+			return get_setting('replace_default_fs_shortcut',True)
+

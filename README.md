@@ -1,4 +1,4 @@
-# Chromeless Sublime v1.1.4
+# Chromeless Sublime
 
 
 # Requirements:

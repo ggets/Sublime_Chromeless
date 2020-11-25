@@ -1,5 +1,5 @@
 __author__='GG [github.com/ggetsov/]'
-__version__='1.1.4'
+__version__='1.2.1'
 __license__='Apache 2'
 __copyright__='Copyright 2020, Dreamflame Inc.'
 # Requires the FullScreenStatus sublime package (via Package Control)

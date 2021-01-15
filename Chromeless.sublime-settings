@@ -1,6 +1,6 @@
 {
 	// Enabling "auto_reenter_on_plugin_load" will re-enter chromeless mode immediately on plugin load if it was enabled upon exit (a few seconds after sublime has been started):
-	"persistent_chromeless_states":true,
+	"persistent_chromeless_states": true,
 	// Replace the default fullscreen shortcut:
-	"replace_default_fs_shortcut":true,
+	"replace_default_fs_shortcut": false,
 }

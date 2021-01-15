@@ -1,24 +1,35 @@
 [
 	{
-		"keys":["f11"],
-		"command":"toggle_chromeless",
-		"context":[
+		"keys": [ "f11" ],
+		"command": "toggle_chromeless",
+		"context": [
 			{
-				"key":"chromeless.replace_default_fs_shortcut",
-				"operator":"equal",
-				"operand":true
+				"key": "chromeless.replace_default_fs_shortcut",
+				"operator": "equal",
+				"operand": true
 			}
 		]
 	},
 	{
-		"keys":["ctrl+f11"],
-		"command":"toggle_full_screen",
-		"context":[
+		"keys": [ "ctrl+f11" ],
+		"command": "toggle_full_screen",
+		"context": [
 			{
-				"key":"chromeless.replace_default_fs_shortcut",
-				"operator":"equal",
-				"operand":true
+				"key": "chromeless.replace_default_fs_shortcut",
+				"operator": "equal",
+				"operand": true
 			}
 		]
 	},
-]
+	{
+		"keys": [ "ctrl+f11" ],
+		"command": "toggle_chromeless",
+		"context": [
+			{
+				"key": "chromeless.replace_default_fs_shortcut",
+				"operator": "equal",
+				"operand": false
+			}
+		]
+	}
+ ]

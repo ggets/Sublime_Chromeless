@@ -1,5 +1,5 @@
 __author__='GG [github.com/ggetsov/]'
-__version__='1.3.2'
+__version__='1.3.3'
 __license__='Apache 2'
 __copyright__='Copyright 2020, Dreamflame Inc.'
 # Requires the FullScreenStatus sublime package (via Package Control)
@@ -121,5 +121,5 @@ class ChromelessQueryContextListener(sublime_plugin.EventListener):
 		if((key=='chromeless.replace_default_fs_shortcut') and (operator==0) and (operand==True)):
 			if(not view.window()):
 				return
-			return get_setting('replace_default_fs_shortcut',True)
+			return get_setting('replace_default_fs_shortcut',False)
 

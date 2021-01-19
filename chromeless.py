@@ -1,5 +1,5 @@
 __author__='GG [github.com/ggetsov/]'
-__version__='1.4.4'
+__version__='1.5.0'
 __license__='Apache 2'
 __copyright__='Copyright 2020, Dreamflame Inc.'
 
@@ -86,24 +86,47 @@ class ToggleChromelessCommand(sublime_plugin.TextCommand):
 			obj.set('_chromeless_state',not isfs)
 
 
-class ChromelessQueryContextListener(sublime_plugin.EventListener):
+class ChromelessEventListener(sublime_plugin.EventListener):
 	def on_query_context(self,view,key,operator,operand,match_all):
 		if((key=='chromeless.replace_default_fs_shortcut') and (operator==0) and (operand==True)):
 			if(not view.window()):
 				return
 			return get_setting('replace_default_fs_shortcut',False)
 
-# 4050+
-	def on_load_project_async(self,win):
-		global persistent
-		persistent=get_setting('persistent_chromeless_states',False)
-		state=win.settings().get('_chromeless_state',False)
-		if(persistent):
-			if(state):
-				# print("{} (ID {})needs to be switched back to chromeless. State: {}".format(win_uid,win.id(),win_state))
-				win.run_command("toggle_chromeless",{"returning":True})
-		else:
-			# Saved state is lost, but consistency is preserved:
-			win.settings().set('_chromeless_state',False)
+	if(int(sublime.version())<4050):
+		def on_new_async(self,view):
+			# print("on_new_async()")
+			win=view.window() or sublime.active_window()
+			obj=win.settings()
+			# print("on_new_async()",view,win,obj,obj.get('_chromeless_state'))
+			# print("on_new_async()",(len(win.views())==0),obj.get('_chromeless_state',None))
+			if(obj.get('_chromeless_state',None) is None):
+				obj.set('_chromeless_state',False)
+				if((len(win.views())==0) and (get_setting('go_chromeless_on_new_window',False))):
+						win.run_command("toggle_chromeless")
 
+	# On new window (4050+):
+	else:
+		def on_new_window_async(self,win):
+			# print("on_new_window_async()")
+			obj=win.settings()
+			obj.set('_chromeless_state',False)
+			if(get_setting('go_chromeless_on_new_window',False)):
+				win.run_command("toggle_chromeless")
 
+	# This is probably redundant, because of on_new_async()/on_new_window_async():
+		def on_load_project_async(self,win):
+			# print("on_load_project_async()")
+			global persistent
+			persistent=get_setting('persistent_chromeless_states',False)
+			obj=win.settings()
+			state=obj.get('_chromeless_state',None)
+			if(state is None):
+					obj.set('_chromeless_state',False)
+			if(persistent):
+				if(state):
+					# print("{} (ID {})needs to be switched back to chromeless. State: {}".format(win_uid,win.id(),win_state))
+					win.run_command("toggle_chromeless",{"returning":True})
+			else:
+				# Saved state is lost, but consistency is preserved:
+				obj.set('_chromeless_state',False)

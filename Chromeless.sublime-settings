@@ -3,5 +3,7 @@
 	// (a few seconds after sublime has been started, depending on amount of plugins loaded):
 	"persistent_chromeless_states": true,
 	// Replace the default fullscreen shortcut:
-	"replace_default_fs_shortcut": false
+	"replace_default_fs_shortcut": false,
+	// Switch to chromeless mode upon opening a new window:
+	"go_chromeless_on_new_window": true
 }

@@ -9,7 +9,7 @@
     "args":
     {
       "base_file":"${packages}/Chromeless/Chromeless.sublime-settings",
-      "default":"// Re-enter chromeless mode immediately on plugin load if it was enabled upon exit\n// (a few seconds after sublime has been started, depending on amount of plugins loaded):\n{\n\t\"persistent_chromeless_states\":true,\n\t// Replace the default fullscreen shortcut:\n\t\"replace_default_fs_shortcut\":false\n}\n"
+      "default":"{\n\n}\n"
     }
   },
   {

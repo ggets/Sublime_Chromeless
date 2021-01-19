@@ -25,7 +25,7 @@
 ### Sublime Text [Package Control][] package manager
 
 1. Open "Package Control: Install Package" from the Command Palette (**`Ctrl/Super`** + **`Shift`** + **`P`**).
-2. Select the "Chromeless" option to install Chromeless.
+2. Select the "Chromeless" option to install.
 
 [Package Control]: https://wbond.net/sublime_packages/package_control
 

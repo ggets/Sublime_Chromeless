@@ -10,15 +10,17 @@
         "id":"package-settings",
         "children":[
           {
-            "caption":"Chromeless Sublime",
+            "mnemonic":"C",
+            "caption":"Chromeless",
             "children":[
               {
+                "mnemonic":"S",
                 "caption":"Settings",
                 "command":"edit_settings",
                 "args":
                 {
-                  "base_file":"${packages}/ChromelessSublime/ChromelessSublime.sublime-settings",
-                  "default":"// Enabling\"auto_reenter_on_plugin_load\" will re-enter chromeless mode immediately on plugin load if it was enabled upon exit (a few seconds after sublime has been started):\n{\n\t\"auto_reenter_on_plugin_load\":true,\n}\n"
+                  "base_file":"${packages}/Chromeless/Chromeless.sublime-settings",
+                  "default":"// Re-enter chromeless mode immediately on plugin load if it was enabled upon exit\n// (a few seconds after sublime has been started, depending on amount of plugins loaded):\n{\n\t\"persistent_chromeless_states\":true,\n\t// Replace the default fullscreen shortcut:\n\t\"replace_default_fs_shortcut\":false\n}\n"
                 }
               },
               {
@@ -26,7 +28,7 @@
                 "command":"edit_settings",
                 "args":
                 {
-                  "base_file":"${packages}/ChromelessSublime/Default (${platform}).sublime-keymap",
+                  "base_file":"${packages}/Chromeless/Default (${platform}).sublime-keymap",
                 }
               },
               {

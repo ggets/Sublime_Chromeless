@@ -1,5 +1,5 @@
 __author__='GG [github.com/ggetsov/]'
-__version__='1.4.2'
+__version__='1.4.4'
 __license__='Apache 2'
 __copyright__='Copyright 2020, Dreamflame Inc.'
 

@@ -1,6 +1,6 @@
 # Chromeless Sublime
 
-  A SublimeText v3+ plugin to allow removing the titlebar of the window.
+  A Sublime Text v3+ plugin to allow removing the titlebar of the window.
 
 
 ## Requirements:
@@ -21,14 +21,14 @@
 
 ## Installation
 
-### Sublime [Package Control][] package manager
+### Sublime Text [Package Control][] package manager
 
 1. Open "Package Control: Install Package" from the Command Palette (`Ctrl/Super` + `Shift` + `P`).
 2. Select the "Chromeless" option to install Chromeless.
 
 [Package Control]: https://wbond.net/sublime_packages/package_control
 
-### Manual Installation via Git
+### Manual installation via Git
 
 ```bash
 git clone https://github.com/ggets/Sublime_PastePlus.git "Chromeless"

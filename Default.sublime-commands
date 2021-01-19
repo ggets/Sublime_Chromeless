@@ -1,23 +1,23 @@
 [
-  {
-    "caption":"Chromeless: Toggle titlebar",
-    "command":"toggle_chromeless",
-  },
-  {
-    "caption":"Chromeless: Edit settings",
-    "command":"edit_settings",
-    "args":
-    {
-      "base_file":"${packages}/Chromeless/Chromeless.sublime-settings",
-      "default":"{\n\n}\n"
-    }
-  },
-  {
-    "caption":"Chromeless: Edit key bindings",
-    "command":"edit_settings",
-    "args":
-    {
-      "base_file":"${packages}/Chromeless/Default (${platform}).sublime-keymap",
-    }
-  },
+	{
+		"caption":"Chromeless: Toggle titlebar",
+		"command":"toggle_chromeless",
+	},
+	{
+		"caption":"Chromeless: Edit settings",
+		"command":"edit_settings",
+		"args":
+		{
+			"base_file":"${packages}/Chromeless/Chromeless.sublime-settings",
+			"default":"{\n}\n"
+		}
+	},
+	{
+		"caption":"Chromeless: Edit key bindings",
+		"command":"edit_settings",
+		"args":
+		{
+			"base_file":"${packages}/Chromeless/Default (${platform}).sublime-keymap",
+		}
+	},
 ]

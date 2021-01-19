@@ -1,44 +1,44 @@
 [
-  {
-    "mnemonic":"n",
-    "caption":"Preferences",
-    "id":"preferences",
-    "children":[
-      {
-        "mnemonic":"P",
-        "caption":"Package Settings",
-        "id":"package-settings",
-        "children":[
-          {
-            "mnemonic":"C",
-            "caption":"Chromeless",
-            "children":[
-              {
-                "mnemonic":"S",
-                "caption":"Settings",
-                "command":"edit_settings",
-                "args":
-                {
-                  "base_file":"${packages}/Chromeless/Chromeless.sublime-settings",
-                  "default":"{\n\n}\n"
-                }
-              },
-              {
-                "mnemonic":"K",
-                "caption":"Key Bindings",
-                "command":"edit_settings",
-                "args":
-                {
-                  "base_file":"${packages}/Chromeless/Default (${platform}).sublime-keymap",
-                }
-              },
-              {
-                "caption":"-"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
+	{
+		"mnemonic":"n",
+		"caption":"Preferences",
+		"id":"preferences",
+		"children":[
+			{
+				"mnemonic":"P",
+				"caption":"Package Settings",
+				"id":"package-settings",
+				"children":[
+					{
+						"mnemonic":"C",
+						"caption":"Chromeless",
+						"children":[
+							{
+								"mnemonic":"S",
+								"caption":"Settings",
+								"command":"edit_settings",
+								"args":
+								{
+									"base_file":"${packages}/Chromeless/Chromeless.sublime-settings",
+									"default":"{\n}\n"
+								}
+							},
+							{
+								"mnemonic":"K",
+								"caption":"Key Bindings",
+								"command":"edit_settings",
+								"args":
+								{
+									"base_file":"${packages}/Chromeless/Default (${platform}).sublime-keymap",
+								}
+							},
+							{
+								"caption":"-"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
 ]

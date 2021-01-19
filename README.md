@@ -26,11 +26,9 @@
 1. Open "Package Control: Install Package" from the Command Palette (`Ctrl/Super` + `Shift` + `P`).
 2. Select the "Chromeless" option to install Chromeless.
 
-[Package Control]: http://wbond.net/sublime_packages/package_control
+[Package Control]: https://wbond.net/sublime_packages/package_control
 
-### Git Installation
-
-To install manually using Git, clone to your "Packages" directory.
+### Manual Installation via Git
 
 ```bash
 git clone https://github.com/ggets/Sublime_PastePlus.git "Chromeless"

@@ -1,5 +1,5 @@
 __author__='GG [github.com/ggetsov/]'
-__version__='2.0.2'
+__version__='2.0.3'
 __license__='Apache 2'
 __copyright__='Copyright 2020, Dreamflame Inc.'
 
@@ -281,5 +281,11 @@ class ChromelessEventListener(sublime_plugin.EventListener):
 	else:	# On new window (4050+):
 		def on_new_window_async(self,win):
 			# print("on_new_window_async()")
-			if(get_setting('go_chromeless_on_new_window',False)):
+			if(
+						(get_setting('go_chromeless_on_new_window',False))
+				 or	(
+									(get_setting('persistent_chromeless_states',False))
+							and	(win.settings().get('_chromeless_state',False))
+						)
+				):
 				win.run_command('chromeless_on')

@@ -18,6 +18,7 @@
 
 ## Caveats/Known issues:
 * Window is not movable/draggable
+* Since version 2.0.2 linux support has been dropped. If you still need linux support, you can install version 1.5.0 manually.
 
 
 ## Installation
@@ -34,6 +35,15 @@
 ```bash
 git clone https://github.com/ggets/Sublime_Chromeless.git "Chromeless"
 ```
+
+### Manual installation via HTTPS
+
+Download the package from **Releases** and copy it to **Installed Packages** folder.
+
+
+##
+
+##
 
 
 **Ideas and pull requests are welcome**
